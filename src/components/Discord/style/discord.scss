@@ -1,0 +1,65 @@
+.discord {
+    padding: 3rem;
+    background-color: #fff;
+    color: #000;
+    .container {
+        background-image: url('../../../images/dashed.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100vh;
+        padding: 2rem;
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse !important;
+        }
+        .left-content {
+            background-color: rgba(32, 176, 215,0.8);
+            border-radius: 15px;
+            padding: 4rem;
+            @media screen and (max-width: 575px) {
+                padding: 1.5rem;
+            }
+            p {
+                color: var(--text-color);
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: 2px;
+                margin-bottom: 2rem;
+            }
+            button {
+                outline: none;
+                border: none;
+                background-color: #000;
+                color: var(--text-color);
+                font-size: 1rem;
+                font-weight: 500;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+        }
+        .right-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                width: 100%;
+                height: 100%;
+                animation: float 3s ease-in-out infinite alternate;
+                @media (min-width: 769px) and (max-width: 992px) {
+                    width: 135%;
+                    height: 100%;
+                }
+                @keyframes float {
+                    from {
+                        transform: translate(0,0) rotate(0);
+                    }
+                    to {
+                        transform: translate(30px,100px) rotate(-20deg);
+                    }
+                }
+            }
+        }
+    }
+}

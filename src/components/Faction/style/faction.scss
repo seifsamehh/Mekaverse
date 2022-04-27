@@ -1,0 +1,58 @@
+.content {
+    padding: 3rem 1rem;
+    background-position: 10% 160%;
+    @media screen and (max-width: 768px) {
+        flex-direction: column !important;
+    }
+    .left-part {
+        p {
+            color: var(--sub-text-color);
+            font-family: var(--sub-font-family);
+            font-size: 1.2rem;
+            font-weight: 200;
+        }
+        img {
+            width: calc(100% - 10%);
+            height: 100%;
+            cursor: grabbing;
+        }
+    }
+    .right-part {
+        h2 {
+            font-size: 4rem;
+            font-weight: 700;
+            @media (min-width: 769px) and (max-width: 992px) {
+                font-size: 3rem;
+            }
+            &:first-of-type {
+                margin-bottom: 3rem;
+                mark {
+                    color: var(--text-color);
+                    background-color: #000;
+                    padding: 10px 5px;
+                    animation: change 10s ease-in-out infinite alternate;
+                    @keyframes change {
+                        0% {
+                            background-color: var(--Home-1-color);
+                        }
+                        25% {
+                            background-color: var(--Home-2-color);
+                        }
+                        50% {
+                            background-color: var(--Home-3-color);
+                        }
+                        75% {
+                            background-color: var(--Home-4-color);
+                        }
+                        75% {
+                            background-color: var(--Home-1-color);
+                        }
+                    }
+                }
+            }
+            &:last-of-type {
+                color: var(--sub-text-color);
+            }
+        }
+    }
+}

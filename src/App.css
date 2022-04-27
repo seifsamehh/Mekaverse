@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+/* start global variables */
+:root {
+  --Home-1-color: #20b0d7;
+  --Home-2-color: #d69dbb;
+  --Home-3-color: #bc1010;
+  --Home-4-color: #9faac0;
+  --text-color: #fff;
+  --sub-text-color: #666666;
+  --trans-text-color: #bad0ef;
+  --sub-font-family: 'Rajdhani', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* end global variables */
+/* start global components */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+  scroll-behavior: smooth;
 }
-
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a,
+button,
+img,
+p,
+h2,
+h1,
+span {
+  user-select: none;
 }
+main {
+  position: relative;
+  z-index: 10;
+  background-color: #000;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+/* end global components */

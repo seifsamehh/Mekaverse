@@ -1,0 +1,105 @@
+.discord {
+  padding: 3rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.discord .container {
+  background-image: url("../../../images/dashed.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .discord .container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+}
+
+.discord .container .left-content {
+  background-color: rgba(32, 176, 215, 0.8);
+  border-radius: 15px;
+  padding: 4rem;
+}
+
+@media screen and (max-width: 575px) {
+  .discord .container .left-content {
+    padding: 1.5rem;
+  }
+}
+
+.discord .container .left-content p {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.discord .container .left-content button {
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.discord .container .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.discord .container .right-content img {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: float 3s ease-in-out infinite alternate;
+          animation: float 3s ease-in-out infinite alternate;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .discord .container .right-content img {
+    width: 135%;
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes float {
+  from {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  to {
+    -webkit-transform: translate(30px, 100px) rotate(-20deg);
+            transform: translate(30px, 100px) rotate(-20deg);
+  }
+}
+
+@keyframes float {
+  from {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  to {
+    -webkit-transform: translate(30px, 100px) rotate(-20deg);
+            transform: translate(30px, 100px) rotate(-20deg);
+  }
+}
+/*# sourceMappingURL=discord.css.map */

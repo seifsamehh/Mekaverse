@@ -1,0 +1,144 @@
+@-webkit-keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.meka-bg {
+  background-image: url("../../../images/bg-3.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 200vh;
+  position: relative;
+}
+
+.meka-bg .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10rem 0 0 -35px;
+}
+
+@media screen and (max-width: 575px) {
+  .meka-bg .content {
+    left: 0%;
+    margin: -10rem 0 0 -10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .meka-bg .content {
+    left: 0%;
+    margin: -10rem 0 0 10px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .meka-bg .content {
+    left: 10%;
+  }
+}
+
+.meka-bg .content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 575px) {
+  .meka-bg .content h1 {
+    font-size: 3rem;
+  }
+}
+
+.meka-bg .content h1 span {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.meka-bg .content .btn {
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  -moz-user-select: text;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 16px 36px 22px;
+  background-color: rgba(32, 176, 215, 0.3);
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.meka-bg .content .btn:-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.meka-bg .content .btn--stripe {
+  overflow: hidden;
+  position: relative;
+}
+
+.meka-bg .content .btn--stripe:after {
+  content: '';
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+
+.meka-bg .content .btn--stripe:hover {
+  background-color: #20b0d7;
+  color: #fff;
+}
+
+.meka-bg .content .btn--stripe:hover:after {
+  background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+  border-top: 1px solid #fff;
+  -webkit-animation: stripe-slide 12s infinite linear forwards;
+          animation: stripe-slide 12s infinite linear forwards;
+}
+
+.meka-bg .content .btn--large {
+  width: 50%;
+}
+
+.meka-bg .content .btn--radius {
+  border-radius: 36px;
+}
+/*# sourceMappingURL=mekaBack.css.map */

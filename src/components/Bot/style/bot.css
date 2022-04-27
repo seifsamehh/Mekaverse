@@ -1,0 +1,93 @@
+#bot .bots-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3rem;
+}
+
+@media screen and (max-width: 575px) {
+  #bot .bots-gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#bot .bots-gallery .bot-1,
+#bot .bots-gallery .bot-2,
+#bot .bots-gallery .bot-3,
+#bot .bots-gallery .bot-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+#bot .bots-gallery .bot-1 .emoji,
+#bot .bots-gallery .bot-2 .emoji,
+#bot .bots-gallery .bot-3 .emoji,
+#bot .bots-gallery .bot-4 .emoji {
+  width: 10%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #bot .bots-gallery .bot-1 .emoji,
+  #bot .bots-gallery .bot-2 .emoji,
+  #bot .bots-gallery .bot-3 .emoji,
+  #bot .bots-gallery .bot-4 .emoji {
+    width: 25%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  #bot .bots-gallery .bot-1 .emoji,
+  #bot .bots-gallery .bot-2 .emoji,
+  #bot .bots-gallery .bot-3 .emoji,
+  #bot .bots-gallery .bot-4 .emoji {
+    width: 30%;
+    height: 100%;
+  }
+}
+
+#bot .bots-gallery .bot-1 .bot,
+#bot .bots-gallery .bot-2 .bot,
+#bot .bots-gallery .bot-3 .bot,
+#bot .bots-gallery .bot-4 .bot {
+  width: 60%;
+  height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  #bot .bots-gallery .bot-1 .bot,
+  #bot .bots-gallery .bot-2 .bot,
+  #bot .bots-gallery .bot-3 .bot,
+  #bot .bots-gallery .bot-4 .bot {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=bot.css.map */

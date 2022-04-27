@@ -1,0 +1,42 @@
+#bot {
+    .bots-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding: 3rem;
+        @media screen and (max-width: 575px) {
+            flex-direction: column;
+        }
+        .bot-1,
+        .bot-2,
+        .bot-3,
+        .bot-4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: grabbing;
+            .emoji {
+                width: 10%;
+                height: 100%;
+                @media screen and (max-width: 768px) {
+                    width: 25%;
+                    height: 100%;
+                }
+                @media (min-width: 769px) and (max-width: 992px) {
+                    width: 30%;
+                    height: 100%;
+                }
+            }
+            .bot {
+                width: 60%;
+                height: 100%;
+                @media screen and (max-width: 992px) {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

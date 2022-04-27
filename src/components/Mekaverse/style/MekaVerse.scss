@@ -1,0 +1,129 @@
+$color-gray: #20b0d7;
+$color-black: #000;
+$stripe-height: 7px;
+$btn-color: $color-gray;
+$btn-background: #fff;
+$btn-color-hover: #fff;
+$btn-background-hover: $color-gray;
+$border-color: $color-gray;
+$border-color-hover: #fff;
+
+@mixin reset-button {
+    overflow : visible;
+    border : 0;
+    background : transparent;
+    font : inherit;
+    line-height : normal;
+    cursor : pointer;
+    -moz-user-select : text;
+    
+    &:-moz-focus-inner {
+        padding : 0;
+        border : 0;
+    }
+}
+
+@keyframes stripe-slide {
+    0% { background-position: 0% 0; }
+    100% { background-position: 100% 0; }
+}
+.meka-verse {
+    background-image: url('../../../images/bg-1.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10rem 0 0 -35px;
+        @media screen and (max-width: 575px) {
+            left: 0%;
+            margin: -10rem 0 0 0;
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            left: 0%;
+            margin: -10rem 0 0 10px;
+        }
+        @media (min-width: 769px) and (max-width: 992px) {
+            left: 10%;
+        }
+        h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-decoration: line-through;
+            @media screen and (max-width: 575px) {
+                font-size: 3.1rem;
+            }
+            span {
+                color: rgba(255,255,255,0.6);
+            }
+        }
+        .btn {
+            @include reset-button;
+            font-size: 1.1rem;
+            font-weight: 500;
+            width: fit-content;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 16px 36px 22px;
+            background-color: rgba(32, 176, 215,0.3);
+            color: #fff;
+            border: 2px solid transparent;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            transition: all .5s ease;
+            &--stripe {
+                overflow: hidden;
+                position: relative;
+                &:after {
+                    content: '';
+                    display: block;
+                    height: $stripe-height;
+                    width: 100%;
+                    background-image: repeating-linear-gradient(
+                        45deg,
+                        #fff,
+                        #fff 1px,
+                        transparent 2px,
+                        transparent 5px
+                    );
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    border-top: 1px solid #fff;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-size: $stripe-height $stripe-height;
+                }
+                &:hover {
+                    background-color: $btn-background-hover;
+                    color: $btn-color-hover;
+                    &:after {
+                        background-image: repeating-linear-gradient(
+                            45deg,
+                            $btn-color-hover,
+                            $btn-color-hover 1px,
+                            transparent 2px,
+                            transparent 5px
+                        );
+                        border-top: 1px solid $border-color-hover;
+                        animation: stripe-slide 12s infinite linear forwards;
+                    }
+                }
+            }
+            &--large {
+                width: 50%;
+            }
+            &--radius {
+                border-radius: 36px;
+            }
+        }
+    }
+}

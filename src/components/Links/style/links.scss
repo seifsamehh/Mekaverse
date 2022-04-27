@@ -1,0 +1,29 @@
+.footer-links {
+    background-color: var(--text-color);
+    color: #000;
+    padding: 3rem;
+    @media screen and (max-width: 992px) {
+        flex-direction: column !important;
+    }
+    .left-part {
+        .links-one,.links-two {
+            display: flex;
+            flex-direction: column;
+            h5 {
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 30px;
+            }
+            a {
+                text-decoration: underline #20b0d7 wavy;
+                color: #000;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    .right-part {
+        .button {
+            cursor: not-allowed;
+        }
+    }
+}
